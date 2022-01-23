@@ -17,11 +17,12 @@ img {
 
 #weather {
     position: absolute;
-    right: 1%;
+    right: 0.25%;
+    padding: 2px;
     text-align: right;
     font-weight: bold;
     font-size: small;
-    color: rgba(0, 0, 0, 0.705);
+    color: rgba(255, 255, 255, 0.788);
 }
 
 #weather span{
@@ -30,14 +31,14 @@ img {
 
 #content {
     display: grid;
-    grid-row-gap: 10%;
+    grid-row-gap: 5%;
     grid-column-gap: 5%;
     padding: 10px;
     width: 70%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 10%;
+    top: 5%;
     text-align: center;
     /* margin-bottom: 5%; */
     padding-bottom: 15px;
@@ -57,153 +58,210 @@ img {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-inline-start: 10px;
-    padding-inline-end: 5px;
-    padding-right: 20px;
+    /* padding-right: 10px; */
     box-sizing: content-box;
     border: 2px solid rgba(78, 78, 78, 0.39);
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
     outline: none; 
+    font-family: 'Outfit', sans-serif;
   }
+
 
 #login-form input[type=text]:focus {
 border: 3px solid rgb(14, 14, 14);
 }
 
 #greeting {
+    text-transform: uppercase;
     font-family: fantasy;
     font-style: italic;
 }
 
 
-
-/* #todo-form {
-    margin: 5px;
-} */
-
 #todo-form input[type=text] {
     margin-left: 10px;
-    width: 100%;
+    width: 60%;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-inline-start: 10px;
     box-sizing: content-box;
     border: 3px solid rgba(78, 78, 78, 0.39);
     -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
+    font-family: 'Outfit', sans-serif;
 }
 
 #todo-form input[type=text]:focus {
     border: 3px solid rgb(14, 14, 14);
   }
 
+
 #mc-form {
-    margin: 5px;
+    margin-left: 12%;
 }
 
-#mc-form input[type=text] {
-    width: 100%;
-    padding-inline-start: 10px;
-    padding-right: 10px;
-    box-sizing: content-box;
-    border: 3px solid rgba(78, 78, 78, 0.39);
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-  }
-
-
-#mc-form input[type=text]:focus {
-    border: 3px solid rgb(14, 14, 14);
-  }
+#mc-form label {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: inherit;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    color: rgb(255,255,255);
+    text-shadow: 2px 2px rgba(114, 113, 113, 0.747);
+}
 
 .item1 {
     grid-column: 1 / span 2;
     grid-row: 1;
-    border: 3px solid rgba(202, 202, 202, 0.623);
+    border: 3px solid rgba(255, 253, 253, 0.76);
 }
 
 .item2 {
     padding-left: 10px;
     padding-right: 50px;
     padding-top: 10px;
-    border: 3px solid rgba(202, 202, 202, 0.623);
+    margin-bottom: 5px;
+    border: 3px solid rgba(255, 253, 253, 0.76);
 }
 
-.itme3 {
-    margin-right: 10px;
+.item3 {
+    padding-left: 10px;
+    padding-right: 50px;
     padding-top: 10px;
-    border: 3px solid rgba(202, 202, 202, 0.623);
+    margin-bottom: 5px;
+    border: 3px solid rgba(255, 253, 253, 0.76);
 }
 
 
 
 #todo-list {
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bolder;
-    margin-top: 5%;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 5px;
     width: 100%;
-    background-color: rgba(207, 203, 203, 0.3);
+    background-color: rgba(207, 203, 203, 0.493);
+    color: rgba(0, 0, 0, 0.781);
     text-align: center;
     top: 50%;
 }
 
-#todo-list button {
+#todo-list li {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#todo-list .delete {
+    right: 5%;
     padding: 1px 1px;
-    margin: 0px 20px;
     background-color: rgba(255, 254, 254, 0);
     border-radius: 8px;
     cursor:pointer;
     border: none;
+    position: absolute;
 }
 
-#todo-list button:hover {
-    background-color: rgba(10, 10, 10, 0.733);
+
+#todo-list .add-country {
+    right: 15%;
+    padding: 1px 1px;
+    background-color: rgba(255, 254, 254, 0);
+    border-radius: 8px;
+    cursor:pointer;
+    border: none;
+    position: absolute;
 }
+
+
+.tooltip {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.404);
+    text-align: center;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 100;
+    width: 50px;
+    top: 130%;
+    left: 60%;
+    position: absolute;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+#todo-list button:hover .tooltip {
+    visibility: visible;
+}
+
+#mc-list button:hover .tooltip {
+    visibility: visible;
+}
+
+.tooltip:after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 10%;
+    border-width: 5px;
+    border-style: solid;
+    margin-left: -5px;
+    border-color: transparent transparent rgba(0, 0, 0, 0.404) transparent;
+  }
 
 #mc-list {
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bolder;
-    margin-top: 5%;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 5px;
     width: 100%;
-    background-color: rgba(207, 203, 203, 0.3);
+    background-color: rgba(207, 203, 203, 0.493);
+    color: rgba(0, 0, 0, 0.781);
     text-align: center;
     top: 50%;
 }
 
-#mc-list button {
+#mc-list li {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#mc-list .delete {
+    right: 5%;
     padding: 1px 1px;
-    margin: 0px 20px;
     background-color: rgba(255, 254, 254, 0);
     border-radius: 8px;
     cursor:pointer;
     border: none;
+    position: absolute;
 }
 
-#mc-list button:hover {
-    background-color: rgba(10, 10, 10, 0.733);
-}
 
 
 button {
     background-color: rgba(255, 255, 255, 0.301);
     border: none;
-    color: black;
+    color: rgba(0, 0, 0, 0.781);
     padding: 10px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 13px;
+    font-weight: bold;
     margin: 2px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
+    font-family: 'Outfit', sans-serif;
 }
 
 button:hover {
-    background-color: rgb(141, 141, 141);
+    background-color: rgb(20, 20, 20);
     color: white;
 }
 
@@ -215,7 +273,7 @@ button:hover {
     text-align: center;
     bottom: 5%;
     background: rgba(37, 37, 37, 0.3);
-    color: rgba(255, 255, 255, 0.719);
+    color: rgba(255, 255, 255, 0.589);
 }
 
 #quote span {

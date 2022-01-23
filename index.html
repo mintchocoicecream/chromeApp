@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Momoentum</title>
 </head>
@@ -17,20 +20,20 @@
             <div class="item1">
                 <h1 id="clock">00:00:00</h1>
                 <form id="login-form" class="hidden">
-                    <input required maxlength="15" type="text" placeholder="What is your name?" />
+                    <input required maxlength="35" type="text" placeholder="What is your name?" />
                     <span><button>Log In</button></span>
                 </form>
                 <h1 id="greeting" class="hidden"></h1>
             </div>
             <div class="item2">
                 <form id="todo-form">
-                    <input type="text" placeholder="Where do you want to travel?" required />
+                    <input required maxlength="30" type="text" placeholder="Where do you want to travel?" required />
                 </form>
                 <ul id="todo-list"></ul>
             </div>
             <div class="item3">
                 <form id="mc-form">
-                    <input type="text" placeholder="Mission Complete!" required />
+                    <label>💜 MY PLACE 💜</label>
                 </form>
                 <ul id="mc-list"></ul>
             </div>
@@ -40,8 +43,7 @@
             <span></span>
         </div> 
     </div>
-
-    <!-- <div id="bg-image"></div> -->
+    <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');</style>
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>

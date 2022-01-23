@@ -8,7 +8,6 @@ const savedUsername = localStorage.getItem(USERNAME_KEY);
 
 function onLoginSubmit(event) {
     event.preventDefault();
-    logoutBtn.classList.add(HIDDEN_CLASSNAME);
     loginForm.classList.add(HIDDEN_CLASSNAME);
     const username = loginInput.value;
     localStorage.setItem(USERNAME_KEY, username);

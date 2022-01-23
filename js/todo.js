@@ -25,6 +25,13 @@ function deleteToDo(event) {
     saveToDos(li);
 }
 
+function deleteCountry(event) {
+    const li = event.target.parentElement;
+    li.remove();
+    countries = countries.filter(country => country.id !== parseInt(li.id));
+    saveCountries(li);
+}
+
 function moveToDo(event) {
     event.preventDefault();
     const li = event.target.parentElement;
@@ -46,8 +53,14 @@ function paintCountries(newCountry) {
     li.id = newCountry.id;
     const span = document.createElement("span");
     const button1 = document.createElement("button");
+    const tooltipSpan = document.createElement("span");
+    tooltipSpan.classList.add("tooltip");
+    button1.classList.add("delete");
     button1.innerText = "❌";
+    tooltipSpan.innerText = "Delete";
+    button1.addEventListener("click", deleteCountry);
     span.innerText = newCountry.text;
+    button1.appendChild(tooltipSpan);
     li.appendChild(span);
     li.appendChild(button1);
     countryList.appendChild(li);
@@ -60,13 +73,23 @@ function paintToDo(newTodo) {
     span.innerText = newTodo.text;
     const button1 = document.createElement("button");
     const button2 = document.createElement("button");
+    const tooltipSpan1 = document.createElement("span");
+    const tooltipSpan2 = document.createElement("span");
+    button1.classList.add("delete");
+    button2.classList.add("add-country");
+    tooltipSpan1.classList.add("tooltip");
+    tooltipSpan2.classList.add("tooltip");
+    button2.innerText = "💜";
     button1.innerText = "❌";
-    button2.innerText = "🌏";
+    tooltipSpan1.innerText = "Delete";
+    tooltipSpan2.innerText = "MY PLACE";
     button1.addEventListener("click", deleteToDo);
     button2.addEventListener("click", moveToDo);
+    button1.appendChild(tooltipSpan1);
+    button2.appendChild(tooltipSpan2);
     li.appendChild(span);
-    li.appendChild(button1);
     li.appendChild(button2);
+    li.appendChild(button1);
     toDoList.appendChild(li);
 }
 
