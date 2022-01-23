@@ -1,0 +1,223 @@
+.hidden {
+    display: none;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;  
+    position: relative;
+}
+
+img {
+    width: inherit;
+    max-width: 100%;
+}
+
+
+#weather {
+    position: absolute;
+    right: 1%;
+    text-align: right;
+    font-weight: bold;
+    font-size: small;
+    color: rgba(0, 0, 0, 0.705);
+}
+
+#weather span{
+    display: block;
+}
+
+#content {
+    display: grid;
+    grid-row-gap: 10%;
+    grid-column-gap: 5%;
+    padding: 10px;
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10%;
+    text-align: center;
+    /* margin-bottom: 5%; */
+    padding-bottom: 15px;
+}
+
+#clock {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 70px;
+}
+
+#login-form {
+    padding-bottom: 5%;
+}
+
+#login-form input[type=text] {
+    width: 30%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-inline-start: 10px;
+    padding-inline-end: 5px;
+    padding-right: 20px;
+    box-sizing: content-box;
+    border: 2px solid rgba(78, 78, 78, 0.39);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    outline: none; 
+  }
+
+#login-form input[type=text]:focus {
+border: 3px solid rgb(14, 14, 14);
+}
+
+#greeting {
+    font-family: fantasy;
+    font-style: italic;
+}
+
+
+
+/* #todo-form {
+    margin: 5px;
+} */
+
+#todo-form input[type=text] {
+    margin-left: 10px;
+    width: 100%;
+    padding-inline-start: 10px;
+    box-sizing: content-box;
+    border: 3px solid rgba(78, 78, 78, 0.39);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+#todo-form input[type=text]:focus {
+    border: 3px solid rgb(14, 14, 14);
+  }
+
+#mc-form {
+    margin: 5px;
+}
+
+#mc-form input[type=text] {
+    width: 100%;
+    padding-inline-start: 10px;
+    padding-right: 10px;
+    box-sizing: content-box;
+    border: 3px solid rgba(78, 78, 78, 0.39);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+
+
+#mc-form input[type=text]:focus {
+    border: 3px solid rgb(14, 14, 14);
+  }
+
+.item1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    border: 3px solid rgba(202, 202, 202, 0.623);
+}
+
+.item2 {
+    padding-left: 10px;
+    padding-right: 50px;
+    padding-top: 10px;
+    border: 3px solid rgba(202, 202, 202, 0.623);
+}
+
+.itme3 {
+    margin-right: 10px;
+    padding-top: 10px;
+    border: 3px solid rgba(202, 202, 202, 0.623);
+}
+
+
+
+#todo-list {
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder;
+    margin-top: 5%;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: rgba(207, 203, 203, 0.3);
+    text-align: center;
+    top: 50%;
+}
+
+#todo-list button {
+    padding: 1px 1px;
+    margin: 0px 20px;
+    background-color: rgba(255, 254, 254, 0);
+    border-radius: 8px;
+    cursor:pointer;
+    border: none;
+}
+
+#todo-list button:hover {
+    background-color: rgba(10, 10, 10, 0.733);
+}
+
+#mc-list {
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder;
+    margin-top: 5%;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: rgba(207, 203, 203, 0.3);
+    text-align: center;
+    top: 50%;
+}
+
+#mc-list button {
+    padding: 1px 1px;
+    margin: 0px 20px;
+    background-color: rgba(255, 254, 254, 0);
+    border-radius: 8px;
+    cursor:pointer;
+    border: none;
+}
+
+#mc-list button:hover {
+    background-color: rgba(10, 10, 10, 0.733);
+}
+
+
+button {
+    background-color: rgba(255, 255, 255, 0.301);
+    border: none;
+    color: black;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(141, 141, 141);
+    color: white;
+}
+
+#quote {
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    bottom: 5%;
+    background: rgba(37, 37, 37, 0.3);
+    color: rgba(255, 255, 255, 0.719);
+}
+
+#quote span {
+    display: block;
+} 

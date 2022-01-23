@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Momoentum</title>
+</head>
+<body>
+    <div id="background">
+        <div id="weather">
+            <span></span>
+            <span></span>
+        </div>
+        <div id="content">
+            <div class="item1">
+                <h1 id="clock">00:00:00</h1>
+                <form id="login-form" class="hidden">
+                    <input required maxlength="15" type="text" placeholder="What is your name?" />
+                    <span><button>Log In</button></span>
+                </form>
+                <h1 id="greeting" class="hidden"></h1>
+            </div>
+            <div class="item2">
+                <form id="todo-form">
+                    <input type="text" placeholder="Where do you want to travel?" required />
+                </form>
+                <ul id="todo-list"></ul>
+            </div>
+            <div class="item3">
+                <form id="mc-form">
+                    <input type="text" placeholder="Mission Complete!" required />
+                </form>
+                <ul id="mc-list"></ul>
+            </div>
+        </div>
+        <div id="quote">
+            <span></span>
+            <span></span>
+        </div> 
+    </div>
+
+    <!-- <div id="bg-image"></div> -->
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/background.js"></script>
+</body>
+</html>
