@@ -1,4 +1,4 @@
-# Vanilla JS Chellenge
+# Vanilla JS Challenge
 ### 바닐라JS로 크롬앱 만들기
 
 ##### 바닐라JS: 프레임워크와 라이브러리를 사용하지 않은 순수 자바스크립트
