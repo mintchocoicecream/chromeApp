@@ -7,16 +7,52 @@ body {
     margin: 0;
     padding: 0;  
     position: relative;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-img {
-    width: inherit;
+button {
+    background-color: rgba(255, 255, 255, 0.301);
+    border: none;
+    color: rgba(0, 0, 0, 0.781);
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+}
+
+button:hover {
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+
+
+.bgImage {
     max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#background {
+    position: absolute;
+    max-width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 
 #weather {
-    position: absolute;
     right: 0.25%;
     padding: 2px;
     text-align: right;
@@ -29,28 +65,59 @@ img {
     display: block;
 }
 
+
 #content {
+    position: absolute;
     display: grid;
     grid-row-gap: 5%;
     grid-column-gap: 5%;
     padding: 10px;
     width: 70%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 15%;
     top: 5%;
     text-align: center;
-    /* margin-bottom: 5%; */
     padding-bottom: 15px;
 }
+
+
+.item1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    border: 3px solid rgba(255, 253, 253, 0.76);
+}
+
+.item2 {
+    padding-right: 20px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+    border: 3px solid rgba(255, 253, 253, 0.76);
+}
+
+.item3 {
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+    border: 3px solid rgba(255, 253, 253, 0.76);
+}
+
+.item4 {
+    margin-top: 50px;
+    grid-column: 1 / span 2;
+    grid-row: 3;
+}
+
+
 
 #clock {
     font-family: 'Courier New', Courier, monospace;
     font-size: 70px;
 }
 
+
 #login-form {
     padding-bottom: 5%;
+    margin-left: 50px;
 }
 
 #login-form input[type=text] {
@@ -58,7 +125,7 @@ img {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-inline-start: 10px;
-    /* padding-right: 10px; */
+    padding-right: 10px; 
     box-sizing: content-box;
     border: 2px solid rgba(78, 78, 78, 0.39);
     -webkit-transition: 0.5s;
@@ -76,6 +143,7 @@ border: 3px solid rgb(14, 14, 14);
     text-transform: uppercase;
     font-family: fantasy;
     font-style: italic;
+    text-align: center;
 }
 
 
@@ -98,9 +166,6 @@ border: 3px solid rgb(14, 14, 14);
   }
 
 
-#mc-form {
-    margin-left: 12%;
-}
 
 #mc-form label {
     font-size: 25px;
@@ -112,27 +177,7 @@ border: 3px solid rgb(14, 14, 14);
     text-shadow: 2px 2px rgba(114, 113, 113, 0.747);
 }
 
-.item1 {
-    grid-column: 1 / span 2;
-    grid-row: 1;
-    border: 3px solid rgba(255, 253, 253, 0.76);
-}
 
-.item2 {
-    padding-left: 10px;
-    padding-right: 50px;
-    padding-top: 10px;
-    margin-bottom: 5px;
-    border: 3px solid rgba(255, 253, 253, 0.76);
-}
-
-.item3 {
-    padding-left: 10px;
-    padding-right: 50px;
-    padding-top: 10px;
-    margin-bottom: 5px;
-    border: 3px solid rgba(255, 253, 253, 0.76);
-}
 
 
 
@@ -142,12 +187,14 @@ border: 3px solid rgb(14, 14, 14);
     text-transform: capitalize;
     padding-top: 5px;
     padding-bottom: 5px;
+    padding-left: 0;
     border-radius: 5px;
-    width: 100%;
     background-color: rgba(207, 203, 203, 0.493);
     color: rgba(0, 0, 0, 0.781);
     text-align: center;
-    top: 50%;
+    margin-left: 12%;
+    width: 80%;
+    list-style-position: inside;
 }
 
 #todo-list li {
@@ -197,6 +244,7 @@ border: 3px solid rgb(14, 14, 14);
     visibility: visible;
 }
 
+
 #mc-list button:hover .tooltip {
     visibility: visible;
 }
@@ -212,18 +260,21 @@ border: 3px solid rgb(14, 14, 14);
     border-color: transparent transparent rgba(0, 0, 0, 0.404) transparent;
   }
 
+
 #mc-list {
     font-family: 'Outfit', sans-serif;
     font-weight: bold;
     text-transform: capitalize;
     padding-top: 5px;
     padding-bottom: 5px;
+    padding-left: 0;
     border-radius: 5px;
-    width: 100%;
+    width: 80%;
     background-color: rgba(207, 203, 203, 0.493);
     color: rgba(0, 0, 0, 0.781);
     text-align: center;
-    top: 50%;
+    margin-left: 12%;
+    list-style-position: inside;
 }
 
 #mc-list li {
@@ -243,38 +294,15 @@ border: 3px solid rgb(14, 14, 14);
 }
 
 
-
-button {
-    background-color: rgba(255, 255, 255, 0.301);
-    border: none;
-    color: rgba(0, 0, 0, 0.781);
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 13px;
-    font-weight: bold;
-    margin: 2px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    font-family: 'Outfit', sans-serif;
-}
-
-button:hover {
-    background-color: rgb(20, 20, 20);
-    color: white;
-}
-
 #quote {
     width: 50%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-left: 25%;
     text-align: center;
     bottom: 5%;
     background: rgba(37, 37, 37, 0.3);
     color: rgba(255, 255, 255, 0.589);
 }
+
 
 #quote span {
     display: block;
