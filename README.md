@@ -12,4 +12,4 @@
 <img width="80%" src="https://user-images.githubusercontent.com/64584574/169957553-87be53d9-99d9-4421-b8f2-6d9f0500c931.JPG" /> 
 
 -----
-URL: [mintchocoicecream/github.io](https://mintchocoicecream.github.io)
+URL: [mintchocoicecream.github.io/chromeApp/](https://mintchocoicecream.github.io/chromeApp/)
